@@ -11,7 +11,7 @@ import UIKit
 extension UIApplication {
 
     static var applicationWindow: UIWindow {
-        return UIApplication.shared.keyWindow!
+        return UIApplication.shared.windows.filter {$0.isKeyWindow}.first!
     }
 
     static var isPortraitOnly: Bool {
